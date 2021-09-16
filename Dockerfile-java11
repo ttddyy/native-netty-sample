@@ -1,0 +1,9 @@
+FROM ghcr.io/graalvm/graalvm-ce:java11-21.2.0
+
+RUN gu install native-image
+
+RUN microdnf install procps
+
+RUN microdnf install bc
+
+ENTRYPOINT bash 
